@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Pokoje gościnne</title>
+ 
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="Home_iconpng.png" alt="">
+      <a href="#">Pokoje gościnne</a>
+    </div>
+    <div class="nav-links">
+      <a href="#">Pokoje</a>
+      <a href="#">Kontakt</a>
+      <a href="#">Cennik</a>
+      <a href="#">Ciekawostki</a>
+      <a href="#">Inne</a>
+    </div>
+    <button><i class="ri-bank-line"></i>Płatność</button>
+  </nav>
+
+  <div class="hero">
+    <div class="left-section">
+      <div class="top">
+        <h2>Pokoje gościnne</h2>
+        <p>
+          Zapraszamy do Chłopów na niezapomniane wakacje – zaledwie 50 m od morza! Nasz nowoczesny pensjonat położony jest tuż przy głównym wejściu na plażę, zapewniając komfort i wygodę na najwyższym poziomie.
+        </p>
+        <div class="buttons">
+          <button class="doc">Zapisz się <i class="ri-arrow-right-line"></i></button>
+          <button class="git"><i class="ri-bank-line"></i>Płatność</button>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Other Socials:</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/people/Pokoje-Go%C5%9Bcinne-Marian-Szyma%C5%84ski/100063555674458/" class="facebook">
+            <i class="ri-facebook-box-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="sunset-landscape-beach-weststrand.jpg">
+  </div>
+
+  <div class="about">
+    <p>About Web Development</p>
+    <h2>I creat bla bla bla</h2>
+    <div class="items">
+      <div class="item">
+        <div class="inner">
+          <img src="https://www.pokoje-chlopy.pl/zdjecia/male/chlopy-pokoje-goscinne-chlopy-06.jpg">
+          <a href="#">Front end</a>
+          <p>More bla blu bloob bla bloom</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner">
+          <img src="https://www.pokoje-chlopy.pl/zdjecia/male/chlopy-pokoje-goscinne-chlopy-01.jpg">
+          <a href="#">Front end</a>
+          <p>More bla blu bloob bla bloom</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner">
+          <img src="https://www.pokoje-chlopy.pl/zdjecia/male/chlopy-pokoje-goscinne-chlopy-03.jpg">
+          <a href="#">Front end</a>
+          <p>More bla blu bloob bla bloom</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects">
+    <div class="inner">
+      <p class="debug"><i class="ri-command-line"></i>Ciekawostki</p>
+      <h2>Projects Showcase</h2>
+      <p class="info">Take a look bla bla spoge bloob</p>
+      <button>Explore my projects <i class="ri-arrow-right-line"></i></button>
+      <div class="items">
+        <div class="item">
+          <i class="ri-shopping-bag-4-line"></i>
+          <a href="#">Smażalnia Kacper</a>
+          <p>Dla klientów Pokoi Gościnnych rabat 10% w naszej smażalni ryb</p>
+        </div>
+        <div class="item">
+          <i class="ri-id-card-line"></i>
+          <a href="#">Plac zabaw</a>
+          <p>Ogrodzony, bezpieczny plac zabaw z domkiem, zjeżdżalnią i bujakami na terenie pensjonatu – idealne miejsce dla dzieci!</p>
+        </div>
+        <div class="item">
+          <i class="ri-apps-line"></i>
+          <a href="#">Sklep spożywczy</a>
+          <p>Sklep spożywczy na terenie pensjonatu, otwarty: czerwiec-sierpień 07:00-23:00, przez cały rok 07:00-20:00.</p>
+        </div>
+        <div class="item">
+          <i class="ri-news-line"></i>
+          <a href="#">E-commers</a>
+          <p>Development bla bla bla blu bli bla</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2>Interested in Working together?</h2>
+    <div class="items">
+      <div class="item">
+        <a href="#">Shedule a call</a>
+        <p>Concat bal arbuz bla bla</p>
+        <button>Schedule a call</button>
+      </div>
+      <div class="item">
+        <a href="#">Explore my Work</a>
+        <p>Viem my portfolio</p>
+        <button>Viem my Work</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="#">Terms of service</a>
+    <a href="#">Privacy Police</a>
+    <p>@ 2025 azazaouh</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="paymentModal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Dane do płatności</h2>
+      <p>Numer konta: <strong>12 3456 7890 1234 5678 9012 3456</strong></p>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const modal = document.getElementById("paymentModal");
+    const bankButtons = document.querySelectorAll("button i.ri-bank-line");
+    const closeBtn = document.querySelector(".close-button");
+  
+    // Добавляем обработчик ко всем кнопкам с иконкой "ri-bank-line"
+    bankButtons.forEach(icon => {
+      icon.parentElement.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+  
+</body>
+</html>
